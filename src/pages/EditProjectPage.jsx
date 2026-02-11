@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 function EditProjectPage() {
   const [title, setTitle] = useState("");
