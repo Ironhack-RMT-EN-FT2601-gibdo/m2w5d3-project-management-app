@@ -14,7 +14,7 @@ function EditProjectPage() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  const [isLoading, setIsLoading] = useState(false)
+  // const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
 
@@ -32,7 +32,7 @@ function EditProjectPage() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true)
+    // setIsLoading(true)
     // ...updated logic should be here
 
     const body = {
