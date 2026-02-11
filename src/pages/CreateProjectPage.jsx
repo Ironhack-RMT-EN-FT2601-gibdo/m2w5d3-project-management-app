@@ -1,12 +1,38 @@
+import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function CreateProjectPage() {
+
+  const navigate = useNavigate()
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // ...logic for creating a new Project should be here
+
+    const body = {
+      title: title,
+      description: description
+    }
+
+    console.log(body)
+
+    fetch(`${import.meta.env.VITE_SERVER_URL}/projects`, {
+      method: "POST",
+      body: {}
+    })
+
+    axios.post(`${import.meta.env.VITE_SERVER_URL}/projects`, body)
+    .then(() => {
+      // if we get to this line of code, it means the backend created the document correctly!
+      navigate("/projects")
+    })
+    .catch((error) => {
+      console.log(error)
+    })
 
   };  
 
