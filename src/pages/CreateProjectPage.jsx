@@ -20,10 +20,11 @@ function CreateProjectPage() {
 
     console.log(body)
 
-    fetch(`${import.meta.env.VITE_SERVER_URL}/projects`, {
-      method: "POST",
-      body: {}
-    })
+    //* example of how to do POST requests with fetch
+    // fetch(`${import.meta.env.VITE_SERVER_URL}/projects`, {
+    //   method: "POST",
+    //   body: {}
+    // })
 
     axios.post(`${import.meta.env.VITE_SERVER_URL}/projects`, body)
     .then(() => {
